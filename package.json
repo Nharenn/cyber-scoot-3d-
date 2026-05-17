@@ -1,0 +1,21 @@
+{
+  "name": "e-scooter-3d-app",
+  "version": "1.0.0",
+  "description": "E-Scooter 3D Interactive Viewer - 69 parts assembly with revolute joints",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4",
+    "vite": "^8.0.13"
+  },
+  "dependencies": {
+    "@parcel/config-default": "^2.8.3",
+    "parcel-reporter-static-files-copy": "^1.5.0",
+    "three": "^0.184.0"
+  },
+  "staticFiles": {
+    "staticPath": "static"
+  }
+}

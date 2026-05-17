@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CYBER//SCOOT — INTERACTIVE SHOWCASE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="./assets/index-CylyQEPO.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DLyL9385.css">
+</head>
+<body>
+
+  <div id="scanlines"></div>
+  <div id="vignette"></div>
+  <div id="flash"></div>
+  <div id="speed-lines"></div>
+
+  <!-- ── Welcome overlay ── -->
+  <div id="welcome">
+    <div id="welcome-box">
+      <div class="w-title">// CYBER//SCOOT</div>
+      <div class="w-sub">INTERACTIVE 3D SHOWCASE</div>
+      <div class="w-steps">
+        <div class="w-step">
+          <span class="w-num">01</span>
+          <div class="w-text">
+            <strong>SELECCIONA UNA UNIDAD</strong>
+            <span>Clic en UNIT 01 ó 02, o directo en la scooter</span>
+          </div>
+        </div>
+        <div class="w-step">
+          <span class="w-num">02</span>
+          <div class="w-text">
+            <strong>USA LOS CONTROLES</strong>
+            <span>Acelera, frena, carga y cambia batería</span>
+          </div>
+        </div>
+        <div class="w-step">
+          <span class="w-num">03</span>
+          <div class="w-text">
+            <strong>EXPLORA LAS PIEZAS</strong>
+            <span>Clic en los círculos numerados para ver la ficha técnica</span>
+          </div>
+        </div>
+      </div>
+      <button id="welcome-close">▶ CONTINUAR</button>
+    </div>
+  </div>
+
+  <!-- ── Top HUD ── -->
+  <div id="hud-top">
+    <div id="logo">
+      <span class="glitch" data-text="CYBER//SCOOT">CYBER//SCOOT</span>
+    </div>
+    <div id="sys-info">
+      <span class="sys-label">SYS</span><span class="nc">◉ ONLINE</span>
+      <span class="sys-label">NET</span><span class="nm">◉ ACTIVE</span>
+      <span class="sys-label">UNITS</span><span class="ng">02 LOADED</span>
+    </div>
+    <div id="clock"></div>
+  </div>
+
+  <!-- ── Corner brackets ── -->
+  <div class="corner c-tl"></div>
+  <div class="corner c-tr"></div>
+  <div class="corner c-bl"></div>
+  <div class="corner c-br"></div>
+
+  <!-- ── Left stats panel ── -->
+  <div id="panel" class="hidden">
+    <div class="p-header">
+      <span>// UNIT DATA</span>
+      <span class="p-close" id="p-close">✕</span>
+    </div>
+    <div class="unit-name" id="u-name">—</div>
+    <div class="unit-tag"  id="u-tag">SELECT A UNIT</div>
+    <div class="divider"></div>
+    <div class="stat">
+      <span class="s-label">STATUS</span>
+      <span class="s-val" id="s-status"><span class="nc">STANDBY</span></span>
+    </div>
+    <div class="stat">
+      <span class="s-label">SPEED</span>
+      <span class="s-val nc" id="s-speed">0 <small>km/h</small></span>
+    </div>
+    <div class="stat">
+      <span class="s-label">BATTERY</span>
+      <span class="s-val" id="s-batt">100<small>%</small></span>
+    </div>
+    <div id="batt-bar-wrap">
+      <div id="batt-fill"></div>
+      <div id="batt-pulse"></div>
+    </div>
+    <div class="stat">
+      <span class="s-label">RANGE</span>
+      <span class="s-val nc" id="s-range">-- <small>km</small></span>
+    </div>
+    <div class="stat">
+      <span class="s-label">MOTOR</span>
+      <span class="s-val nc" id="s-motor">250W</span>
+    </div>
+    <div class="stat">
+      <span class="s-label">TOP SPEED</span>
+      <span class="s-val nm">45 <small>km/h</small></span>
+    </div>
+    <div class="divider"></div>
+    <div id="elog">
+      <div class="elog-entry">▸ SYSTEM INITIALIZED</div>
+    </div>
+  </div>
+
+  <!-- ── Bottom control bar ── -->
+  <div id="ctrl-bar">
+
+    <!-- Paso 1: siempre visible -->
+    <div id="step1-area">
+      <div class="step-badge">① SELECCIONAR</div>
+      <button class="cbtn unit-btn" id="btn1">
+        <span class="ubtn-num">01</span>
+        <span class="ubtn-info">
+          <span class="ubtn-title">CYBER MK-I</span>
+          <span class="ubtn-sub">CYBERPUNK EDITION</span>
+        </span>
+      </button>
+      <button class="cbtn unit-btn" id="btn2">
+        <span class="ubtn-num">02</span>
+        <span class="ubtn-info">
+          <span class="ubtn-title">TIER URBAN</span>
+          <span class="ubtn-sub">SMART CITY UNIT</span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Separador -->
+    <div id="ctrl-div" class="hidden"></div>
+
+    <!-- Paso 2: visible tras seleccionar -->
+    <div id="step2-area" class="hidden">
+      <div class="step-badge active-step">② SIMULAR</div>
+      <div id="actions">
+        <button class="cbtn accel"  id="b-accel" data-tip="Trail naranja · gira ruedas · drena batería">
+          <span class="ab-icon">▶▶</span><span class="ab-text">ACELERAR</span>
+        </button>
+        <button class="cbtn danger" id="b-brake" data-tip="Frena ruedas · sacude la cámara">
+          <span class="ab-icon">⏹</span><span class="ab-text">FRENAR</span>
+        </button>
+        <button class="cbtn warn"   id="b-dis"   data-tip="Descarga batería rápidamente">
+          <span class="ab-icon">⚡</span><span class="ab-text">DESCARGAR</span>
+        </button>
+        <button class="cbtn ok"     id="b-chg"   data-tip="Rayos eléctricos · recarga batería">
+          <span class="ab-icon">↑</span><span class="ab-text">CARGAR</span>
+        </button>
+        <button class="cbtn info"   id="b-swap"  data-tip="Extrae e instala batería nueva al 100%">
+          <span class="ab-icon">⟳</span><span class="ab-text">SWAP BAT.</span>
+        </button>
+        <button class="cbtn dim"    id="b-desel">
+          <span class="ab-icon">✕</span><span class="ab-text">SOLTAR</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Hint inicial -->
+    <div id="hint">▼ CLIC EN UNIT 01 Ó 02 PARA COMENZAR</div>
+
+  </div>
+
+  <!-- ── Speedometer HUD ── -->
+  <div id="speedo" style="display:none">
+    <svg viewBox="0 0 120 80" id="speedo-svg">
+      <path d="M15,70 A45,45 0 0,1 105,70" fill="none" stroke="#003344" stroke-width="7" stroke-linecap="round"/>
+      <path id="speedo-arc" d="M15,70 A45,45 0 0,1 105,70" fill="none" stroke="#00ffff" stroke-width="7" stroke-linecap="round" stroke-dasharray="141" stroke-dashoffset="141"/>
+    </svg>
+    <div id="speedo-val">0</div>
+    <div id="speedo-lbl">km/h</div>
+    <div id="speedo-state">STANDBY</div>
+  </div>
+
+  <!-- ── Callout overlays ── -->
+  <div id="callouts"></div>
+
+  <!-- ── Nav toolbar (right side) ── -->
+  <div id="nav-bar">
+    <button class="nav-btn active" id="nav-orbit" data-mode="orbit" title="Rotar [R]">↻</button>
+    <button class="nav-btn"        id="nav-pan"   data-mode="pan"   title="Mover [G / Espacio]"><svg viewBox="0 0 14 16" width="13" height="15" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="8" x2="4" y2="2.5"/><line x1="6.5" y1="8" x2="6.5" y2="1.5"/><line x1="9" y1="8" x2="9" y2="2.5"/><line x1="11" y1="8" x2="11" y2="4.5"/><path d="M2 8 Q2 14 7 15 Q12 14 12 10 V8 H2Z"/></svg></button>
+    <div class="nav-sep"></div>
+    <button class="nav-btn" id="nav-fit"   title="Encuadrar [F]">⊡</button>
+    <button class="nav-btn" id="nav-reset" title="Vista inicial">⌂</button>
+  </div>
+  <div id="nav-hint">
+    <span>Clic izq → Rotar</span>
+    <span>Clic der → Desplazar</span>
+    <span>Scroll → Zoom</span>
+    <span>Espacio+drag → Pan</span>
+    <span>[F] Encuadrar · [Esc] Deselect</span>
+  </div>
+
+</body>
+</html>
