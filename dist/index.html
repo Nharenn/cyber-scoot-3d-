@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CYBER//SCOOT — INTERACTIVE SHOWCASE</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="./assets/index-CylyQEPO.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-DLyL9385.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&amp;family=Share+Tech+Mono&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/e-scooter-3d-app.c92073ef.css">
 </head>
 <body>
 
@@ -74,7 +71,7 @@
       <span class="p-close" id="p-close">✕</span>
     </div>
     <div class="unit-name" id="u-name">—</div>
-    <div class="unit-tag"  id="u-tag">SELECT A UNIT</div>
+    <div class="unit-tag" id="u-tag">SELECT A UNIT</div>
     <div class="divider"></div>
     <div class="stat">
       <span class="s-label">STATUS</span>
@@ -139,23 +136,23 @@
     <div id="step2-area" class="hidden">
       <div class="step-badge active-step">② SIMULAR</div>
       <div id="actions">
-        <button class="cbtn accel"  id="b-accel" data-tip="Trail naranja · gira ruedas · drena batería">
-          <span class="ab-icon">▶▶</span><span class="ab-text">ACELERAR</span>
+        <button class="cbtn accel" id="b-accel" data-tip="Trail naranja · gira ruedas · drena batería">
+          <span class="ab-icon">▷▷</span><span class="ab-text">ACELERAR</span>
         </button>
         <button class="cbtn danger" id="b-brake" data-tip="Frena ruedas · sacude la cámara">
-          <span class="ab-icon">⏹</span><span class="ab-text">FRENAR</span>
+          <span class="ab-icon">◼◼</span><span class="ab-text">FRENAR</span>
         </button>
-        <button class="cbtn warn"   id="b-dis"   data-tip="Descarga batería rápidamente">
-          <span class="ab-icon">⚡</span><span class="ab-text">DESCARGAR</span>
+        <button class="cbtn warn" id="b-dis" data-tip="Descarga batería rápidamente">
+          <span class="ab-icon">↯</span><span class="ab-text">DESCARGAR</span>
         </button>
-        <button class="cbtn ok"     id="b-chg"   data-tip="Rayos eléctricos · recarga batería">
-          <span class="ab-icon">↑</span><span class="ab-text">CARGAR</span>
+        <button class="cbtn ok" id="b-chg" data-tip="Rayos eléctricos · recarga batería">
+          <span class="ab-icon">▲</span><span class="ab-text">CARGAR</span>
         </button>
-        <button class="cbtn info"   id="b-swap"  data-tip="Extrae e instala batería nueva al 100%">
-          <span class="ab-icon">⟳</span><span class="ab-text">SWAP BAT.</span>
+        <button class="cbtn info" id="b-swap" data-tip="Extrae e instala batería nueva al 100%">
+          <span class="ab-icon">⇄</span><span class="ab-text">SWAP BAT.</span>
         </button>
-        <button class="cbtn dim"    id="b-desel">
-          <span class="ab-icon">✕</span><span class="ab-text">SOLTAR</span>
+        <button class="cbtn dim" id="b-desel">
+          <span class="ab-icon">⊗</span><span class="ab-text">SOLTAR</span>
         </button>
       </div>
     </div>
@@ -166,10 +163,10 @@
   </div>
 
   <!-- ── Speedometer HUD ── -->
-  <div id="speedo" style="display:none">
+  <div id="speedo" style="display: none">
     <svg viewBox="0 0 120 80" id="speedo-svg">
-      <path d="M15,70 A45,45 0 0,1 105,70" fill="none" stroke="#003344" stroke-width="7" stroke-linecap="round"/>
-      <path id="speedo-arc" d="M15,70 A45,45 0 0,1 105,70" fill="none" stroke="#00ffff" stroke-width="7" stroke-linecap="round" stroke-dasharray="141" stroke-dashoffset="141"/>
+      <path d="M15,70 A45,45 0 0,1 105,70" fill="none" stroke="#003344" stroke-width="7" stroke-linecap="round"></path>
+      <path id="speedo-arc" d="M15,70 A45,45 0 0,1 105,70" fill="none" stroke="#00ffff" stroke-width="7" stroke-linecap="round" stroke-dasharray="141" stroke-dashoffset="141"></path>
     </svg>
     <div id="speedo-val">0</div>
     <div id="speedo-lbl">km/h</div>
@@ -182,9 +179,9 @@
   <!-- ── Nav toolbar (right side) ── -->
   <div id="nav-bar">
     <button class="nav-btn active" id="nav-orbit" data-mode="orbit" title="Rotar [R]">↻</button>
-    <button class="nav-btn"        id="nav-pan"   data-mode="pan"   title="Mover [G / Espacio]"><svg viewBox="0 0 14 16" width="13" height="15" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="8" x2="4" y2="2.5"/><line x1="6.5" y1="8" x2="6.5" y2="1.5"/><line x1="9" y1="8" x2="9" y2="2.5"/><line x1="11" y1="8" x2="11" y2="4.5"/><path d="M2 8 Q2 14 7 15 Q12 14 12 10 V8 H2Z"/></svg></button>
+    <button class="nav-btn" id="nav-pan" data-mode="pan" title="Mover [G / Espacio]"><svg viewBox="0 0 14 16" width="13" height="15" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="8" x2="4" y2="2.5"></line><line x1="6.5" y1="8" x2="6.5" y2="1.5"></line><line x1="9" y1="8" x2="9" y2="2.5"></line><line x1="11" y1="8" x2="11" y2="4.5"></line><path d="M2 8 Q2 14 7 15 Q12 14 12 10 V8 H2Z"></path></svg></button>
     <div class="nav-sep"></div>
-    <button class="nav-btn" id="nav-fit"   title="Encuadrar [F]">⊡</button>
+    <button class="nav-btn" id="nav-fit" title="Encuadrar [F]">⊡</button>
     <button class="nav-btn" id="nav-reset" title="Vista inicial">⌂</button>
   </div>
   <div id="nav-hint">
@@ -195,5 +192,7 @@
     <span>[F] Encuadrar · [Esc] Deselect</span>
   </div>
 
-</body>
-</html>
+  <script src="/e-scooter-3d-app.bc007c61.js" type="module"></script>
+
+
+</body></html>

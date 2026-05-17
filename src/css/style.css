@@ -522,7 +522,7 @@ canvas { display: block; position: fixed; top: 0; left: 0; touch-action: none; }
 .ubtn-sub   { font-size: 0.48rem; color: var(--magenta); letter-spacing: 0.08em; }
 
 /* ── Action buttons ───────────────────────────────────── */
-.ab-icon { font-size: 0.9rem; line-height: 1; }
+.ab-icon { font-size: 0.9rem; line-height: 1; font-variant-emoji: text; font-family: 'Share Tech Mono', monospace; }
 .ab-text { font-size: 0.6rem; letter-spacing: 0.08em; }
 .cbtn.dim { border-color: rgba(0,255,255,0.25); color: rgba(0,255,255,0.35); }
 .cbtn.dim:hover { border-color: var(--red); color: var(--red); box-shadow: 0 0 10px var(--red); }
